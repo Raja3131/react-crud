@@ -1,0 +1,26 @@
+label{
+    color: black;
+}
+select{
+    border-radius: 10px;
+
+}
+option{
+    border-radius: 10px;
+}
+#button{
+    border-radius: 10px;
+    margin-left: 37px;
+    margin-bottom: -8px;
+
+}
+
+
+.inputtext{
+    width:50%;
+    border-radius: 5px;
+}
+#label{
+    margin-left: -68px;
+    color: black;
+}
