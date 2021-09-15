@@ -23,19 +23,7 @@ export default class Data extends React.Component {
 
     this.setState({ profession: e.target.value });
   }
-  componentDidMount() {
-    const data = [];
-    this.setState({
-      datas: data.map((event) => {
-        return {
-          name: event.name,
-          date: event.date,
-          profession: event.profession,
-          id: idGenerator(),
-        };
-      }),
-    });
-  }
+ 
 
   handleChange = (e) => {
     const name = e.target.name;
@@ -115,7 +103,7 @@ export default class Data extends React.Component {
   };
 
   render() {
-    const create = this.state.create ? "Add+" : "Update";
+    const create = this.state.create ? "+" : "Update";
     const { datas } = this.state;
     const inputIsEmpty =
       this.state.name === "" ||
@@ -127,8 +115,8 @@ export default class Data extends React.Component {
       <div>
           <Form className="form">
           <Form.Label id="formlabel" column sm="4">Name:</Form.Label>
-        <input id="formcontrol"
-          style={{ width: 210}}
+        <Form.Control id="formcontrol"
+          style={{ width: 220}}
           type="text"
           placeholder="Enter name"
           onChange={this.handleChange}
@@ -136,15 +124,15 @@ export default class Data extends React.Component {
           value={this.state.name}
         /><br/>
         <Form.Label id="formlabel" column sm="6">Date:</Form.Label>
-        <input id="formdate"
-          style={{ width: 210 }}
+        <Form.Control id="formdate"
+          style={{ width: 220 }}
           type="date"
-          placeholder=""
+          placeholder="mm/dd/yyyy"
           onChange={this.handleChange}
           name="date"
           value={this.state.date}
         /><br/>
-        <Form.Label id="label" column sm="5">Profession:</Form.Label>
+        <Form.Label id="label" column sm="4">Profession:</Form.Label>
         <select id="selectvalue"
           name="profession"
           onChange={this.handleChangeselect}
@@ -160,7 +148,7 @@ export default class Data extends React.Component {
         </select><br/>
 
         <Button variant="primary"
-          style={{ width: 150 }}
+          style={{ width: 80 }}
           disabled={inputIsEmpty}
           onClick={
             this.state.create
@@ -196,7 +184,7 @@ export default class Data extends React.Component {
                   </td>
                   <td>
                     <Button variant="danger" onClick={this.handleDelete} id={entry.id}>
-                      Delete
+                      -
                     </Button>
                   </td>
                 </tr>

@@ -21,7 +21,8 @@ option{
     width:50%;
 }
 #formlabel{
-    margin-left: -68px;
+    margin-left: -51px;
+    
     
 }
 #formcontrol{
@@ -37,11 +38,16 @@ option{
     float: right;
     background-color:rgb(161, 165, 161);
     border-style: dashed;
+    
 }
 #selectvalue{
     width: 50%;
     float: right;
     margin-right: -9px;
+    border-radius: 10px;
+    color: rgb(120, 122, 120);
+    font-weight:bold;
+    font-style: italic;
 
 
     
