@@ -26,11 +26,11 @@ export default class Data extends React.Component {
   componentDidMount() {
     const data = [];
     this.setState({
-      datas: data.map((e) => {
+      datas: data.map((event) => {
         return {
-          name: e.name,
-          date: e.date,
-          profession: e.profession,
+          name: event.name,
+          date: event.date,
+          profession: event.profession,
           id: idGenerator(),
         };
       }),
@@ -125,9 +125,9 @@ export default class Data extends React.Component {
         : false;
     return (
       <div>
-          <Form>
-          <label id="label">Name</label>
-        <input id="inputtext"
+          <Form className="form">
+          <Form.Label id="formlabel" column sm="4">Name:</Form.Label>
+        <input id="formcontrol"
           style={{ width: 210}}
           type="text"
           placeholder="Enter name"
@@ -135,8 +135,8 @@ export default class Data extends React.Component {
           name="name"
           value={this.state.name}
         /><br/>
-        <label id="label">Date</label>
-        <input id="inputtext"
+        <Form.Label id="formlabel" column sm="6">Date:</Form.Label>
+        <input id="formdate"
           style={{ width: 210 }}
           type="date"
           placeholder=""
@@ -144,8 +144,8 @@ export default class Data extends React.Component {
           name="date"
           value={this.state.date}
         /><br/>
-        <label id="label">Profession</label>
-        <select
+        <Form.Label id="label" column sm="5">Profession:</Form.Label>
+        <select id="selectvalue"
           name="profession"
           onChange={this.handleChangeselect}
           value={this.state.profession}

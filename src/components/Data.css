@@ -17,10 +17,37 @@ option{
 
 
 .inputtext{
+    background-color:green;
     width:50%;
-    border-radius: 5px;
 }
-#label{
+#formlabel{
     margin-left: -68px;
-    color: black;
+    
+}
+#formcontrol{
+    width: 50%;
+    float: right;
+    background-color:rgb(180, 180, 180);
+    border-radius: 10px;
+
+    
+}
+#formdate{
+    width: 50%;
+    float: right;
+    background-color:rgb(161, 165, 161);
+    border-style: dashed;
+}
+#selectvalue{
+    width: 50%;
+    float: right;
+    margin-right: -9px;
+
+
+    
+}
+#formselect{
+    margin-left: -43px;
+    margin-right: -9px;
+
 }
